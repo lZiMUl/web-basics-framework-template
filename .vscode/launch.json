@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [{
+		"name": "Initialization",
+		"type": "node-terminal",
+		"request": "launch",
+		"command": "npm run init"
+	}, {
+		"name": "Global dependency",
+		"type": "node-terminal",
+		"request": "launch",
+		"command": "npm run globalRely"
+	}, {
+		"name": "Development environment",
+		"type": "node-terminal",
+		"request": "launch",
+		"command": "npm run dev"
+	}]
+}

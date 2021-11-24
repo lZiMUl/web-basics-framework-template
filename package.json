@@ -1,0 +1,76 @@
+{
+	"name": "web-basics-framework-template",
+	"description": "Web Basics Framework Template",
+	"version": "1.0.0",
+	"author": {
+		"name": "lZiMUl",
+		"email": "AA2908554069@gmail.com",
+		"url": "https://b23.tv/vUMYbj"
+	},
+	"contributors": [
+		{
+			"name": "lZiMUl",
+			"email": "AA2908554069@gmail.com",
+			"url": "https://b23.tv/vUMYbj"
+		}
+	],
+	"maintainers": [
+		{
+			"name": "lZiMUl",
+			"email": "AA2908554069@gmail.com",
+			"url": "https://b23.tv/vUMYbj"
+		}
+	],
+	"homepage": "https://b23.tv/vUMYbj",
+	"main": "./src/app.js",
+	"type": "module",
+	"license": "Apache-2.0",
+	"scripts": {
+		"start": "node .",
+		"dev": "nodemon .",
+		"test": "node ./tests/index.js",
+		"build": "node ./builds/index.js"
+	},
+	"keywords": [
+		"lZiMUl",
+		"WebSite",
+		"Basics",
+		"Framework",
+		"Template",
+		"Vue"
+	],
+	"dependencies": {
+		"eruda": "^2.4.1",
+		"eruda-benchmark": "^2.0.0",
+		"eruda-code": "^2.0.0",
+		"eruda-dom": "^2.0.0",
+		"eruda-features": "^2.0.0",
+		"eruda-fps": "^2.0.0",
+		"eruda-geolocation": "^2.0.0",
+		"eruda-memory": "^2.0.0",
+		"eruda-orientation": "^2.0.0",
+		"eruda-timing": "^2.0.0",
+		"eruda-touches": "^2.0.0",
+		"html-json-highlight": "^1.0.0",
+		"ini": "^2.0.0",
+		"koa": "^2.13.1",
+		"koa-bodyparser": "^4.3.0",
+		"koa-router": "^10.1.1",
+		"koa-static": "^5.0.0",
+		"mongoose": "^6.0.11",
+		"querystringify": "^2.2.0",
+		"timer-mission": "^1.0.6",
+		"ws": "^8.2.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lZiMUl/web-basics-framework-template.git"
+	},
+	"bugs": {
+		"url": "https://github.com/lZiMUl/web-basics-framework-template/issues/",
+		"email": "AA2908554069@gmail.com"
+	},
+	"private": true,
+	"preferGlobal": true,
+	"deprecated": false
+}

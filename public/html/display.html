@@ -1,0 +1,50 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-23 03:53:30
+ * @LastEditTime: 2021-11-23 04:32:00
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /Projects/web-basics-framework-template/public/html/display.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		window.addEventListener('load', global => {
+			const video = document.getElementById('video');
+			const start = document.getElementById('start');
+
+			start.addEventListener('click', async event => {
+				const stream = await navigator.mediaDevices.getDisplayMedia({
+					video: true,
+					audio: true
+				});
+				const mediaRecorder = new MediaRecorder(stream, {
+					mimeType: 'video/webm'
+				});
+
+				const cache = [];
+				mediaRecorder.addEventListener('dataavailable', ({ data }) => cache.push(data));
+				mediaRecorder.addEventListener('stop', () => {
+					const blob = new Blob(cache, {
+						type: cache[0].type
+					});
+					video.setAttribute('src', URL.createObjectURL(blob));
+				})
+				mediaRecorder.start();
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<video id="video" width="900" height="300" controls></video>
+	<button id="start">Start</button>
+</body>
+
+</html>
