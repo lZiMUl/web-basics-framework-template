@@ -57,7 +57,7 @@ window.addEventListener('load', global => {
 		env.skybox = BABYLON.MeshBuilder.CreateBox("skyBox", {size:1000.0}, scene);
 		env.skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
 		env.skyboxMaterial.backFaceCulling = false;
-		env.skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("https://patrickryanms.github.io/BabylonJStextures/Demos/sodaBottle/assets/skybox/hamburg", scene);
+		env.skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("/assets/images/tdscene/hamburg", scene);
 		env.skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
 		env.skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
 		env.skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
@@ -72,7 +72,7 @@ window.addEventListener('load', global => {
 	const bottle = {};
 	const table = {};
 	async function loadMeshes() {
-		bottle.file = await BABYLON.SceneLoader.AppendAsync("https://patrickryanms.github.io/BabylonJStextures/Demos/sodaBottle/assets/gltf/sodaBottle.gltf");
+		bottle.file = await BABYLON.SceneLoader.AppendAsync("/data/tdscene/sodaBottle.gltf");
 		bottle.glass = scene.getMeshByName("sodaBottle_low");
 		bottle.liquid = scene.getMeshByName("soda_low");
 		bottle.root = bottle.glass.parent;
@@ -80,7 +80,7 @@ window.addEventListener('load', global => {
 		bottle.liquid.alphaIndex = 1;
 		bottle.glassLabels = bottle.glass.clone("glassLabels");
 		bottle.glassLabels.alphaIndex = 0;
-		table.file = await BABYLON.SceneLoader.AppendAsync("https://patrickryanms.github.io/BabylonJStextures/Demos/sodaBottle/assets/gltf/table.gltf");
+		table.file = await BABYLON.SceneLoader.AppendAsync("/data/tdscene/table.gltf");
 		table.mesh = scene.getMeshByName("table_low");
 		bottle.root.position = new BABYLON.Vector3(-0.09, 0.0, -0.09);
 		bottle.root.rotation = new BABYLON.Vector3(0.0, 4.0, 0.0);
@@ -91,9 +91,9 @@ window.addEventListener('load', global => {
 		let textures = [];
 		return new Promise((resolve, reject) => {
 			let textureUrls = [
-				"/assets/images/sodaBottleMat_thickness.png",
-				"/assets/images/sodaMat_thickness.png",
-				"/assets/images/sodaBottleMat_translucency.png"
+				"/assets/images/tdscene/sodaBottleMat_thickness.png",
+				"/assets/images/tdscene/sodaMat_thickness.png",
+				"/assets/images/tdscene/sodaBottleMat_translucency.png"
 			];
 
 			for (let url of textureUrls) {
@@ -272,7 +272,7 @@ window.addEventListener('load', global => {
 
 					engine = await asyncEngineCreation();
 		if (!engine) throw 'engine should not be null.';
-		return createScene()};
+		createScene()};
 		initFunction().then(() => {
 		sceneToRender = scene
 			engine.runRenderLoop(function () {
