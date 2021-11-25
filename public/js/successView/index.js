@@ -6,28 +6,14 @@
  * ProjectAuthor: lZiMUl
 */
 
-// Import ApiVerify And ReLoad And Parse And Reset
+// Import Dependencies
 import { navigatorApiVerify } from '../apiVerify.js';
 import reLoad from '../../../plugins/its/index.js';
 import getViewAlert from '../../../plugins/its/getViewAlert.js';
 import { parse } from '../../../plugins/iniparse/index.js';
 import reSet from '../realTimePreview.js';
 import Alert from '../customAlert.js';
-import '../../../node_modules/eruda/eruda.js';
-import ImportErudaPlugins from '../../../plugins/its/importErudaPlugins.js';
-
-new ImportErudaPlugins('fps');
-new ImportErudaPlugins('features');
-new ImportErudaPlugins('timing');
-new ImportErudaPlugins('memory');
-new ImportErudaPlugins('code');
-new ImportErudaPlugins('benchmark');
-new ImportErudaPlugins('geolocation');
-new ImportErudaPlugins('dom');
-new ImportErudaPlugins('orientation');
-new ImportErudaPlugins('touches');
-
-eruda.init();
+import '../console.js';
 
 // Drag Method
 function Drag(event) {

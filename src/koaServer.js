@@ -16,6 +16,7 @@ import indexView from '../routes/index.js';
 import successView from '../routes/successView.js';
 import api from '../routes/api.js';
 import docs from '../routes/docs.js';
+import tdscene from '../routes/tdscene.js';
 
 // Initialize Koa Instance
 const webServer = new Koa;
@@ -29,6 +30,7 @@ webServer.use(indexView);
 webServer.use(successView);
 webServer.use(api);
 webServer.use(docs);
+webServer.use(tdscene);
 
 // Set Up The 404 Page
 webServer.use(async socket => {

@@ -40,6 +40,8 @@
 		"Vue"
 	],
 	"dependencies": {
+		"babylonjs": "^4.2.0",
+		"babylonjs-loaders": "^4.2.0",
 		"eruda": "^2.4.1",
 		"eruda-benchmark": "^2.0.0",
 		"eruda-code": "^2.0.0",
