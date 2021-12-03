@@ -8,6 +8,7 @@
 
 import { log } from 'console';
 import mongoose from 'mongoose';
+import chalk from 'chalk';
 import { getConfig } from './api.js';
 
 const {
@@ -37,7 +38,7 @@ const template = new Schema({
 			}
 		}, err => {
 			if (!err)
-			log('The MongoDB connection was successful');
+			log(chalk.magenta('The MongoDB connection was successful'));
 		});
 	}
 } (getConfig('mongodb', 'username'), getConfig('mongodb', 'password'), getConfig('mongodb', 'hostname'), getConfig('mongodb', 'database')));

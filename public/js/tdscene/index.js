@@ -17,6 +17,16 @@ import '../console.js';
 import '../../../node_modules/babylonjs/babylon.js';
 import '../../../node_modules/babylonjs-loaders/babylonjs.loaders.min.js';
 
+(async view => {
+	new Alert({
+		title: 'Web Basics Framework Template',
+		content: await getViewAlert(view),
+		close: 'Close'
+	})
+	// Default no use
+	// .addEventListener('touchmove', Drag);
+})('alertFrame');
+
 /** 
  * MainActivity
  * Statement: The following code is not what I wrote, but by the official sample scene code, the original address: https://www.babylonjs.com/

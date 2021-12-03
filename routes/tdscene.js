@@ -8,12 +8,8 @@
 
 // Import Basic Dependencies
 import { log } from 'console';
-import { createReadStream } from 'fs';
-import { join } from 'path';
+import getView from './getView.js';
 import Kr from 'koa-router';
-
-// Read View File
-const getView = name => createReadStream(join('./public/html/', `${name}.html`));
 
 // Initialize Koa-Router Instance
 const Krs = new Kr;

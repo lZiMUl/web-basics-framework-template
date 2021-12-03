@@ -8,9 +8,8 @@
 
 // Import Basic Dependencies
 import { log } from 'console';
-import { createReadStream } from 'fs';
-import { join } from 'path';
 import Kr from 'koa-router';
+import getView from './getView.js';
 import template from '../src/mongodbServer.js';
 
 const exper = new template({
@@ -20,9 +19,6 @@ const exper = new template({
 	email: "AA2908554069@gmail.com",
 	date: new Date().getTime()
 });
-
-// Read View File
-const getView = name => createReadStream(join('./public/html/', `${name}.html`));
 
 const { stringify } = JSON;
 

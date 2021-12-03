@@ -10,6 +10,7 @@
 import { log } from 'console';
 import https from 'https';
 import { WebSocketServer } from 'ws';
+import chalk from 'chalk';
 import {
 	getConfig,
 	getSecurityLicense
@@ -33,11 +34,12 @@ new WebSocketServer({
 server.listen({
 	host,
 	port
-}, event => log(`
+}, event => log(chalk.red(`
 ----------lZiMUl Build Template----------
-The WebSocket Server Is Built On The Host As ${host} And The Port As ${port}
+${chalk.blue(`The WebSocket Server Is Built On The Host As ${host} And The Port As ${port}`)}
 
-Copy This Address, Then Visit The Websocket Test Website On Your Browser To Test It
-wss://${host}:${port}/
+${chalk.yellow('Copy This Address, Then Visit The Websocket Test Website On Your Browser To Test It')}
+
+${chalk.green(`wss://${host}:${port}/`)}
 ----------lZiMUl Build Template----------
-`));
+`)));

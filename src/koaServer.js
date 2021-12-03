@@ -22,7 +22,7 @@ import tdscene from '../routes/tdscene.js';
 const webServer = new Koa;
 
 // Set Up Static Of The Router
-webServer.use(new Ks('./'));
+webServer.use(new Ks('.'));
 webServer.use(new Kb);
 
 // Set Up The Router

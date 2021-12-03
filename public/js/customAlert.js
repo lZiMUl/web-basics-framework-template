@@ -54,20 +54,18 @@ class Alert {
 		background-image: linear-gradient(to right, #00FA9A, #7B68EE);`);
 		TITLE.innerText = title? title: window.location.toString().concat(' Say:');
 		CONTENT.innerHTML = content? content: '';
-		FRAME.addEventListener('load', () => {
-			if (CONTENT.innerHTML) {
-				for (let index = 0; index < CONTENT.getElementsByTagName("script").length; index++) {
-					const script = this.ce('script');
-					script.setAttribute('type', 'text/javascript');
-					const subScript = CONTENT.getElementsByTagName("script").item(index);
-					if (subScript.src)
-					script.src = subScript.src;
-					else
-					script.innerHTML = subScript.innerHTML;
-					document.getElementsByTagName("head").item(0).appendChild(script);
-				}
-			};
-		})
+		if (CONTENT.innerHTML) {
+			for (let index = 0; index < CONTENT.getElementsByTagName("script").length; index++) {
+				const script = this.ce('script');
+				script.setAttribute('type', 'text/javascript');
+				const subScript = CONTENT.getElementsByTagName("script").item(index);
+				if (subScript.src)
+				script.src = subScript.src;
+				else
+				script.innerHTML = subScript.innerHTML;
+				document.getElementsByTagName("head").item(0).appendChild(script);
+			}
+		};
 		DONE.innerText = close? close: 'Close';
 		DONE.addEventListener('click', event => {
 			FRAME.remove();
