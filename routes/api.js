@@ -10,7 +10,7 @@
 import HtmlJsonHighlight from 'html-json-highlight';
 import Kr from 'koa-router';
 import { parse as Uparse } from 'url';
-import { parse as Qparse } from 'querystringify';
+import { parse as Qparse } from 'qs';
 
 // Initialize Koa-Router Instance
 const Krs = new Kr;
