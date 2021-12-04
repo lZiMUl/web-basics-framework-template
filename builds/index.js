@@ -1,3 +1,3 @@
-function build() {
+export default function build() {
 	
 };
