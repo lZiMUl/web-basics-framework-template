@@ -24,7 +24,7 @@
 	"homepage": "https://b23.tv/vUMYbj",
 	"main": "./src/app.js",
 	"type": "module",
-	"license": "Apache-2.0",
+	"license": "GPL-3.0",
 	"scripts": {
 		"start": "node .",
 		"dev": "nodemon .",
