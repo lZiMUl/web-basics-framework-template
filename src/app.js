@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * ProjectName: web-basics-framework-template
@@ -7,14 +7,14 @@
  */
 
 // Import Basic Dependencies
-import { log } from "console";
-import https from "https";
-import webServer from "./koaServer.js";
+import { log } from 'console';
+import https from 'https';
+import webServer from './koaServer.js';
 import { Command, Option } from 'commander';
 import chalk from 'chalk';
-import { getConfig, getSecurityLicense } from "./api.js";
-import "./webSocketServer.js";
-import "./mongodbServer.js";
+import { getConfig, getSecurityLicense } from './api.js';
+import './webSocketServer.js';
+import './mongodbServer.js';
 
 // Create A New Command
 const program = new Command;
@@ -31,8 +31,8 @@ program.parse(process.argv);
 
 // Get Host And Port
 const [host, port] = [
-	program.opts().host ?? getConfig("webServer", "host"),
-	program.opts().port ?? getConfig("webServer", "port"),
+	program.opts().host ?? getConfig('webServer', 'host'),
+	program.opts().port ?? getConfig('webServer', 'port'),
 ];
 
 // Create HttpsServer And Then Bind The Host And Port
