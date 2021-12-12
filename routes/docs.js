@@ -20,7 +20,7 @@ const Krs = new Kr;
 Krs.get('/docs', async socket => {
 	socket.status = 200;
 	socket.type = 'text/html';
-	socket.body = await getView('home');
+	socket.body = await getView('home', './docs/');
 });
 
 // Export Router

@@ -33,20 +33,12 @@
 					<p class="tips">2.Set route: Create a new JS file in the routes directory, The file content is the following</p>
 					<pre><code class="language-javascript">'use strict';
 
-/**
- * ProjectName: web-basics-framework-template
- * ProjectDescription: Web Basics Framework Template
- * ProjectAuthor: lZiMUl
-*/
-
 // Import Basic Dependencies
 import { log } from 'console';
+import getView from './getView.js';
 import { createReadStream } from 'fs';
 import { join } from 'path';
 import Kr from 'koa-router';
-
-// Read View File
-const getView = name => createReadStream(join('./public/html/', `${name}.html`));
 
 const { stringify } = JSON;
 
