@@ -13,8 +13,6 @@ import Kb from 'koa-bodyparser';
 
 // Import Router
 import indexView from '../routes/index.js';
-import successView from '../routes/successView.js';
-import api from '../routes/api.js';
 import docs from '../routes/docs.js';
 
 // Initialize Koa Instance
@@ -26,8 +24,6 @@ webServer.use(new Kb);
 
 // Set Up The Router
 webServer.use(indexView);
-webServer.use(successView);
-webServer.use(api);
 webServer.use(docs);
 
 // Set Up The 404 Page

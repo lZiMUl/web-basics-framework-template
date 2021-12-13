@@ -8,8 +8,8 @@
 
 // Import Dependencies
 import { navigatorApiVerify } from '../apiVerify.js';
-import reLoad from '../../../plugins/its/index.js';
-import getViewAlert from '../../../plugins/its/getViewAlert.js';
+import reLoad from '../../../tools/index.js';
+import getViewAlert from '../../../tools/getViewAlert.js';
 import { parse } from '../../../plugins/iniparse/index.js';
 import reSet from '../realTimePreview.js';
 import Alert from '../customAlert.js';

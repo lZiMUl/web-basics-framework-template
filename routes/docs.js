@@ -7,9 +7,8 @@
 */
 
 // Import Basic Dependencies
-import { log } from 'console';
-import getView from './getView.js';
 import Kr from 'koa-router';
+import getView from '../tools/getView.js';
 
 const { stringify } = JSON;
 

@@ -10,7 +10,9 @@ import { readFileSync } from 'fs';
 import { parse } from 'ini';
 
 // Read Configuration Data
-const getConfig = (index, key, file) => parse(readFileSync(`./configs/${file? file: 'default'}.ini`, 'utf-8'))[index][key] || null;
+function getConfig(index, key, file) {
+	return parse(readFileSync(`./configs/${file? file: 'default'}.ini`, 'utf-8'))[index][key] || null;
+}
 
 // Verify The Certificate
 const getSecurityLicense = {
