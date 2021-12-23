@@ -7,9 +7,10 @@
 */
 
 // Import ApiVerify And ReLoad And Parse And Reset
+
 import { navigatorApiVerify } from '../../../public/js/apiVerify.js';
-import reLoad from '../../../plugins/its/index.js';
-import getViewAlert from '../../../plugins/its/getViewAlert.js';
+import reLoad from '../../../tools/index.js';
+import getViewAlert from '../../../tools/getViewAlert.js';
 import { parse } from '../../../plugins/iniparse/index.js';
 import reSet from '../../../public/js/realTimePreview.js';
 import Alert from '../../../public/js/customAlert.js';
