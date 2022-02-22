@@ -10,13 +10,19 @@
 import { log } from 'console';
 import https from 'https';
 import webServer from './koaServer.js';
-import { Command, Option } from 'commander';
+import {
+  Command,
+  Option
+} from 'commander';
 import chalk from 'chalk';
-import { getConfig, getSecurityLicense } from './api.js';
+import {
+  getConfig,
+  getSecurityLicense
+} from './api.js';
 import './webSocketServer.js';
 
 // Create A New Command
-const program = new Command;
+const program = new Command();
 
 // Set The Version
 program.version('1.0.0');

@@ -10,10 +10,8 @@
 import Kr from 'koa-router';
 import getView from '../tools/getView.js';
 
-const { stringify } = JSON;
-
 // Initialize Koa-Router Instance
-const Krs = new Kr;
+const Krs = new Kr();
 
 // Create Couter Path
 Krs.get('/', async socket => {

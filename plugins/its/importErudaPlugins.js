@@ -13,9 +13,7 @@ class ImportErudaPlugins {
 	
 	async readMain(moduleName) {
 		const script = document.createElement('script');
-		const {
-			main
-		} = await this.readPackage(moduleName);
+		const { main } = await this.readPackage(moduleName);
 		script.setAttribute('src', `/node_modules/eruda-${moduleName}/${main}`);
 		script.addEventListener('load', () => eruda.add(eval(`eruda${moduleName.split('').map((value, index) => index === 0? value.toUpperCase(): value).join('')}`)));
 		document.head.appendChild(script);

@@ -20,7 +20,7 @@ const webServer = new Koa;
 
 // Set Up Static Of The Router
 webServer.use(new Ks('.'));
-webServer.use(new Kb);
+webServer.use(new Kb());
 
 // Set Up The Router
 webServer.use(indexView);
