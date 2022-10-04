@@ -1,7 +1,7 @@
 {
 	"name": "web-basics-framework-template",
 	"description": "Web Basics Framework Template",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"author": {
 		"name": "lZiMUl",
 		"email": "AA2908554069@gmail.com",
@@ -28,7 +28,7 @@
 	"scripts": {
 		"start": "node .",
 		"dev": "nodemon",
-		"test": "node ./test/index.js",
+		"test": "npm start",
 		"build": "tsc"
 	},
 	"keywords": [
