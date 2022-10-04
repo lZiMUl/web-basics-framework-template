@@ -28,7 +28,7 @@
 	"scripts": {
 		"start": "node .",
 		"dev": "nodemon",
-		"test": "node ./tests/index.js",
+		"test": "node ./test/index.js",
 		"build": "tsc"
 	},
 	"keywords": [
@@ -79,7 +79,7 @@
 		"url": "https://github.com/lZiMUl/web-basics-framework-template/issues/",
 		"email": "AA2908554069@gmail.com"
 	},
-	"private": true,
+	"private": false,
 	"preferGlobal": true,
 	"deprecated": false
 }
