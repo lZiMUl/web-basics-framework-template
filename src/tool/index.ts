@@ -1,0 +1,1 @@
+export default (): Promise<string> => new Promise(async callback => callback(await(await fetch('/config/default.ini')).text()));

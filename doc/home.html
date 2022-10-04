@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="robots" content="noindex,nofollow"/>
+		<title>Welcome to [Web-Basics-Framework-Template] page</title>
+		<link rel="icon" href="/public/image/icons/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="/assets/css/docs.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="/assets/css/atom-one-dark.min.css" media="all"/>
+		<script type="module" src="/public/js/realTimePreview.js"></script>
+		<script type="text/javascript" src="/public/js/jquery.js"></script>
+		<script type="text/javascript" src="/public/js/react.production.min.js"></script>
+		<script type="text/javascript" src="/public/js/react-dom.production.min.js"></script>
+		<script type="text/javascript" src="/public/js/babel.min.js"></script>
+		<script type="text/javascript" src="/public/js/tecate.js"></script>
+		<script type="text/javascript" src="/assets/js/highlight.min.js"></script>
+		<script type="module" src="/assets/js/home/index.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>This is my first interface [Web-Basics-Framework-Template]</h1>
+		</header>
+		<div class="app">
+			<div class="cdiv">
+				<span>
+					<p class="tips">1.Create a page: Create a new HTML file in the public/html directory</p>
+				</span>
+			</div>
+			<div class="cdiv">
+				<span>
+					<p class="tips">2.Set route: Create a new JS file in the routes directory, The file content is the following</p>
+					<pre><code class="language-javascript">'use strict';
+
+// Import Basic Dependencies
+import { log } from 'console';
+import getView from './getView.js';
+import { createReadStream } from 'fs';
+import { join } from 'path';
+import Kr from 'koa-router';
+
+// Initialize Koa-Router Instance
+const Krs = new Kr;
+
+// Create Couter Path
+Krs.get('/View file name', async socket => {
+	socket.status = 200;
+	socket.type = 'text/html';
+	socket.body = await getView('View file name');
+});
+
+// Export Router
+export default Krs.routes();
+					</code></pre>
+				</span>
+			</div>
+			<div class="cdiv">
+				<span>
+					<p class="tips">3.Binding server: Open src/koaServer.js file, add the following</p>
+					<pre><code class="language-javascript">import View file name from '../routes/View file name.js';
+webServer.use(View file name);
+					</code></pre>
+				</span>
+			</div>
+		</div>
+		<footer>
+			<p>© 2021~2041 lZiMUl (AA2908554069@gmail.com). All rights reserved.</p>
+		</footer>
+	</body>
+</html>

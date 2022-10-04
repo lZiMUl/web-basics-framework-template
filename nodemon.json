@@ -1,0 +1,12 @@
+{
+	"watch": "./",
+	"ext": "*.*",
+	"ignore": [
+		"./.git/",
+		"./.github/",
+		"./.vscode/",
+		"./src/",
+		"./.gitignore",
+		"./nohup.out"
+		]
+}

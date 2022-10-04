@@ -1,0 +1,11 @@
+{
+    "editor.tabSize": 2,
+    "editor.columnSelection": true,
+    "liveServer.settings.useBrowserPreview": true,
+    "highlight-matching-tag.highlightFromContent": true,
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "prettier.vueIndentScriptAndStyle": true,
+    "files.simpleDialog.enable": true,
+    "workbench.sideBar.location": "left",
+    "editor.fontSize": 12
+}
