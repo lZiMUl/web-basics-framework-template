@@ -28,7 +28,7 @@
 	"scripts": {
 		"start": "node .",
 		"dev": "nodemon",
-		"test": "npm start",
+		"test": "ifconfig",
 		"build": "tsc"
 	},
 	"keywords": [

@@ -37,14 +37,14 @@ program.parse(process.argv);
 
 // Get Host And Port
 const [host, port]: HostPort = [
-	program.opts().host ?? getConfig('webServer', 'host'),
-	program.opts().port ?? getConfig('webServer', 'port'),
+  program.opts().host ?? getConfig('webServer', 'host'),
+  program.opts().port ?? getConfig('webServer', 'port'),
 ];
 
 // Create HttpsServer And Then Bind The Host And Port
 https.createServer(getSecurityLicense, webServer).listen({
-	host,
-	port,
+  host,
+  port,
 }, (): void => info(chalk.red(`
 ----------lZiMUl Build Template----------
 ${chalk.blue(`The Web Server Is Built On The Host As ${host} And The Port As ${port}`)}
