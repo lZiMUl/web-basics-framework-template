@@ -12,7 +12,6 @@ import koaBodyparser from 'koa-bodyparser';
 // Import Router
 import index from './router/index.js';
 import doc from './router/doc.js';
-import demo from './router/demo'
 
 // Initialize Koa Instance
 const koaServer = new Koa();
@@ -24,7 +23,6 @@ koaServer.use(koaBodyparser());
 // Set Up The Router
 koaServer.use(index);
 koaServer.use(doc);
-koaServer.use(demo);
 
 // Set Up The 404 Page
 koaServer.use(async (socket: Koa.ParameterizedContext<Koa.DefaultContext>) => {
